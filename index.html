@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+    <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74704675-4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-74704675-4');
+        </script>
+        <title>Password Generator | New Password Generator | File Integrity Check</title>
+        <meta charset="utf-8">
+        <meta lang="en">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="The lovely web design people at Pasword-Generator.Website">
+        <meta name="description" content="Password Generator | The website for generating secure, random passwords.  Use our helpful password generators to create new passwords for all your accounts.  Our generators produce totally random passwords, word-based passwords, and PINs.">
+        <meta name="keywords" content="Password, Password Generator, New Password, Security, Internet Security, File Integrity, File Checking, File Integrity Check, MD5, SHA1">
+    
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono">
+        <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.min.css">
+        <link rel="stylesheet" type="text/css" href="css/site.min.css">
+        <link rel="icon" href="img/favicon.ico">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/navigation.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1><img id="brandimg" src="img/logo.png" alt="Logo">Password Generator</h1>            
+            <nav>
+                <a href="#passwords">Passwords</a>
+                <a href="#files">File Integrity</a>
+                <a href="#about">About</a>
+            </nav>   
+        </header>
+        
+        <!-- Advert Section -->
+        
+        <section id="ad">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- pwdRespAd -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1798485712270431"
+                 data-ad-slot="2602987625"
+                 data-ad-format="auto"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </section>
+        
+        
+        <section id="siteIcons">
+            <article>
+            <div class="row">
+                <div class="col-t-1"><p class="center"><a href="#passwords"><img src="img/PwdIcon.png" alt="Passwords"></a><br>Password Generation</p></div>
+                <div class="col-t-1"><p class="center"><a href="#files"><img src="img/FileIcon.png" alt="File Integrity"></a><br>File Integrity Generation and Checking</p></div>
+                <div class="col-t-1"><p class="center"><a href="https://itunes.apple.com/gb/app/password-store/id494973811?ls=1&mt=8" target="_blank"><img src="img/AppIcon.png" alt="Password Store App"></a><br>Password Storage App for iOS</p></div>
+            </div>
+            </article>
+        </section>
+        
+        <section id="passwords">
+        <article>
+            <div class="row pwdUnderLine">
+                <div class="col-4 pwdHeight">
+                    <h3>Password Generator</h3>
+                    <label>Password Length (between 6 and 30)</label>
+                    <input type="number" name="pwdlength" id="pwdlength" min="6" max="30" value="8">
+                    <p><input type="checkbox" name="symbols" id="symbols" checked>Include Symbols</p>
+                    <p><input type="checkbox" name="ambig" id="ambig">Remove Ambiguous Characters</p>
+                    <button class="button buttonMargin" type="submit" name="submitPassword" id="submitPassword">Generate Password</button>
+                    <div class="pwdResult"><p class="boldText">Password: <span id="newPwdResult"></span></p></div>
+                </div>          
+                
+                <div class="col-4 pwdHeight">
+                    <h3>Password Phrase Generator</h3>
+                    <label>Number of Words (between 2 and 4)</label>
+                    <input type="number" name="phraselength" id="phraselength" min="2" max="4" value="2">
+                    <p><input type="checkbox" name="randomNum" id="randomNum" value="no">Include Random Numbers</p>
+                    <button class="button buttonMarginA" type="submit" name="submitPhrase" id="submitPhrase">Generate Password</button>
+                    <div id="pwdPhraseResult"><p class="boldText">Password: <span id="newPhraseResult"></span></p></div>                    
+                </div>
+                
+                <div class="col-4 pwdHeight">
+                    <h3>PIN Generator</h3>
+                    <label>PIN Length (between 4 and 10)</label>
+                    <input type="number" name="PINLength" id="PINLength" min="4" max="10" value="4"><br>
+                    <button class="button buttonMarginB" type="submit" name="submitPIN" id="submitPIN">Generate PIN</button>
+                    <div id="pinResult"><p class="boldText">PIN: <span id="newPINResult"></span></p></div>             
+                </div>
+            </div>
+
+            <div id="longPwdIntro" class="row">
+                <div class="col-12">
+                    <h2>Passwords and PINs</h2>
+                    <p>It is vital that for each account you have a different password is used.  Using the same password on more than one email or social media site is asking for trouble, should one account be compromised if your password is the same then all other accounts could be compromised.  Strong, random, and long passwords also go some way to slowing down an attacker.  Avoid keeping passwords in an unsecured location, if you have a lot of passwords then consider using a secure password store application or service.</p>
+                    
+                    <p>To generate a totally random password made up of a string or letters, numbers, or symbols use the Password Generator above, selecting the relevant options.  The 'Remove Ambiguous Characters' will generate a password without <span id="pwdExample">1 0 o l i L I</span> as when read back later it can be unclear which character it is meant to be.</p>
+
+                    <p>To generate a password made up of random words, which might be easier to remember, use the Password Phrase Generator above, selecting the number of words and whether you want random numbers on the end of the password.</p>
+
+                    <p>To generate a new PIN then use the PIN Generator above, selecting the length of PIN required.</p>
+                </div>
+            </div> 
+            
+            <div class="row">
+                <div class="col-12"><h5><a href="#">Back to Top</a></h5></div>
+            </div>
+        </article>
+        </section>
+        
+        <section id="files">
+        <article>
+            <h2>File Integrity</h2>
+            <p>If you regularly upload or download files on the internet, then File Integrity should be important to you.  If you download files from a website how can you be sure the file hasn't been tampered with to contain malicious code?  If you upload files for other people to download how can you help your users be sure that the file they are downloading is the same untampered version you uploaded?</p>
+ 
+            <p>Generating a file Checksum and displaying it on the site with the uploaded file allows users to check after downloading that the file is the same.  After downloading a file, as a user, you can generate a file checksum on your copy of the file and compare it with the one posted on the website.</p>
+            <div>
+                <h3>MD5 File Checksum</h3>
+                <div>
+                    <h4>Windows-based PCs</h4> 
+                    <p>If you are using Windows as your operating system and need to generate a MD5 File Checksum then you can download Microsoft File Checksum Integrity Verifier <a  class="mainLinks" href="https://www.microsoft.com/en-gb/download/details.aspx?id=11533" target="_blank">here</a> for free.</p>
+                    <h4>Mac or Unix-based PCs</h4>
+                    <p>If you are using a Mac operating system then you can generate MD5 file checksum using the built in Terminal application. Before you start make sure the file you want to check is in your Mac Downloads folder. Open 'Terminal' and at the prompt type in <span class="code">cd Downloads</span> and press enter. Then type in <span class="code">md5 your_filename.here</span> and press enter. The result will the be displayed. Caution must be exercised when using the Terminal on a Mac. When you are done type <span class="code">exit</span> and press enter, you can now close the Terminal application.</p>
+                    <p>UNIX-based systems will vary but you should be able to use the MD5 command from the prompt to generate the checksum.</p>
+                </div>
+            </div>
+            
+            <div>
+                <h3>SHA1 File Checksum</h3>
+                <div>
+                <h4>Windows-based PCs</h4> 
+                    <p>If you are using Windows as your operating system and need to generate a SHA1 File Checksum then you can download Microsoft File Checksum Integrity Verifier <a  class="mainLinks" href="https://www.microsoft.com/en-gb/download/details.aspx?id=11533" target="_blank">here</a> for free.</p>
+                    <h4>Mac or Unix-based PCs</h4>
+                    <p>If you are using a Mac operating system then you can generate SHA1 file checksum using the built in Terminal application.  Before you start make sure the file you want to check is in your Mac Downloads folder.  Open 'Terminal' and at the prompt type in <span>cd Downloads</span> and press enter.  Then type in <span>openssl sha1 your_filename.here</span> and press enter.  The result will the be displayed.  Caution must be exercised when using the Terminal on a Mac.  When you are done type <span>exit</span> and press enter, you can now close the Terminal application.</p>
+                    <p>UNIX-based systems will vary but you should be able to use the SHA1 command from the prompt to generate the checksum.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div id="fileBckToTopLink" class="col-12"><h5><a href="#">Back to Top</a></h5></div>
+            </div>
+        </article>
+        </section>
+        
+        <section id="about">
+        <article>
+            <div>
+                <h2>About Password Generator Website</h2>
+                <p>With more and more online accounts available, and more and more individuals looking to exploit online accounts it is vital that your passwords are different for each account you have, and are changed regularly.  This site provides a way of generating random passwords to suit this need.  The code behind the site creates passwords to your requirements using a cryptographically secure random number generator assigning the values to letters, numbers, or symbols as appropriate.  For a secure random password make a long password with letters, numbers, and symbols.  If you don't have access to a password store application this site can also generate passwords made up of two or more randomly picked words and numbers.</p>
+                <p>If you are in the business of uploading files to the web for users to download at a later date and need to provide those users reassurance, or regularly download files that come with checksums, then that is where our file integrity section comes into play.  Knowing that the file you have downloaded is the genuine version, unaltered, is vital to prevent your systems from being exploited by malicious software.  We don't currently have the capability to generate checksums on this site, but have provided instructions for you to generate them yourself offline, on both Windows and MacOS.</p>
+                <p>No password generated by the site is stored anywhere on our servers, and this site uses HTTPS to protect the transmission of the password to you after generation.  For further information on what we do and don't and our liabilities please check out our legal page.  We are a UK-based website, with the servers hosting our files based in the USA.</p>
+                <p>If you want to get in touch with us then please click on the Twitter icon at the bottom of this page and tweet us.</p>
+            </div>
+            <div class="row">
+                <div class="col-12"><h5><a href="#">Back to Top</a></h5></div>
+            </div>
+        </article>
+        </section>
+        
+        <footer>
+            <p class="center">&copy;2017 - 2018 Password Generator Website</p>
+            <p class="center">| <a href="legal.html">Legal</a> | <a href="#passwords">Password</a> | <a href="#files">File Integrity</a> | <a href="#about">About</a> |</p>
+            <p class="center"><a href="https://twitter.com/GetNewPwd" target="_blank"><img src="img/TwitterLogo.png" alt="Twitter"></a></p>
+        </footer>
+    </body>
+</html>
